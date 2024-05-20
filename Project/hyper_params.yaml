@@ -1,0 +1,65 @@
+default: &DEFAULT
+  num_epochs: 1000
+  batch_size: 64
+  data_dir: "./data"
+  data_file: "IMDB Dataset.csv"
+
+BILSTM:
+  <<: *DEFAULT
+  model_name: bilstm
+  log_dir: './log5/bilstm'
+  dataset_class: "IMDBDataset"
+  num_epochs: 10
+  batch_size: 64
+  vocab_size: 10000
+  dropout: 0.0
+  dropout2: 0.0
+  pretrain: false
+
+LSTM:
+  <<: *DEFAULT
+  model_name: lstm
+  log_dir: './log5/lstm/'
+  dataset_class: "IMDBDataset"
+  num_epochs: 10
+  batch_size: 64
+  vocab_size: 10000
+  dropout: 0.0
+  dropout2: 0.0
+  pretrain: false
+
+PRETRAIN_LSTM:
+  <<: *DEFAULT
+  model_name: pretrain_lstm
+  log_dir: './log5/pretrain_lstm/'
+  dataset_class: "IMDBDataset"
+  num_epochs: 10
+  batch_size: 64
+  vocab_size: 10000
+  dropout: 0.2
+  dropout2: 0.0
+  pretrain: true
+
+CNN_LSTM:
+  <<: *DEFAULT
+  model_name: cnn_lstm
+  log_dir: './log5/cnn_lstm/'
+  dataset_class: "IMDBDataset"
+  num_epochs: 10
+  batch_size: 64
+  vocab_size: 10000
+  dropout: 0.2
+  dropout2: 0.0
+  pretrain: false
+
+SIMPLECNN:
+  <<: *DEFAULT
+  model_name: simplecnn
+  log_dir: './log5/cnn/'
+  dataset_class: "IMDBDataset"
+  num_epochs: 10
+  batch_size: 64
+  vocab_size: 10000
+  dropout: 0.0
+  dropout2: 0.0
+  pretrain: false

@@ -1,0 +1,6 @@
+tensorflow
+scikit-learn    
+pyyaml             
+pandas      
+ruamel.yaml
+tensorboardcolab
